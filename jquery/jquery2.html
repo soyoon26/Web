@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="q1">
+        테스트
+    </div>
+    <div id="q2"></div>
+    <button onClick="checkResult()">테스트하기</button>
+    <script>
+        function checkResult() {
+            let fruits = ['파인애플', '사과', '딸기']
+            $('#q1').empty() //기존에 있던 것 지우기
+            fruits.forEach(element => {
+                let temp_html = `<p>${element}</p>`
+                $('#q1').append(temp_html)
+            })
+            let people = [
+                { 'name': '서영', 'age': 24 },
+                { 'name': '현아', 'age': 30 },
+                { 'name': '영환', 'age': 12 },
+                { 'name': '서연', 'age': 15 },
+                { 'name': '지용', 'age': 18 },
+                { 'name': '예지', 'age': 36 }
+            ]
+            people.forEach(element => {
+                let name = element['name']
+                let age = element['age']
+                let temp_html = `<p>${name}은 ${age}살이다.</p>`
+                $('#q2').append(temp_html)
+            })
+
+        }
+    </script>
+</body>
+
+</html>
